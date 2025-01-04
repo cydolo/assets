@@ -82,7 +82,7 @@ public static partial class Assets
 
                var assetPath = property.DeclaringType?
                  .GetCustomAttributes<Asset>()
-                 .Any()
+                 .Any() is true
                      ? string.Join("/",
                          GetTypeHierarchy(property.DeclaringType)
                              .TakeWhile(t => t != typeof(AssetsNew))
