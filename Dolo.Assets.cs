@@ -1,7 +1,7 @@
 /// <summary>
 ///    This class is used to store all the assets used in our projects
 ///    A simple way to get the asset path by using reflection.
-///    e.g. Console.WriteLine(Assets.Moviestarplanet.Diamond
+///    e.g. Console.WriteLine(Assets.Moviestarplanet.Diamond)
 ///    </summary>
 
 
@@ -82,7 +82,7 @@ public static partial class Assets
 
                var assetPath = property.DeclaringType?
                  .GetCustomAttributes<Asset>()
-                 .Any() == true
+                 .Any()
                      ? string.Join("/",
                          GetTypeHierarchy(property.DeclaringType)
                              .TakeWhile(t => t != typeof(AssetsNew))
